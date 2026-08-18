@@ -1,0 +1,28 @@
+{
+  "name": "pwautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:clean": "rmdir /s /q allure-results & rmdir /s /q allure-report",
+    "test:report": "npx allure generate ./allure-results",
+    "test:Web": "npx playwright test --grep \"@Web\"",
+    "test:API": "npx playwright test --grep \"@API\"",
+    "test:Regression": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@azure/identity": "^4.13.1",
+    "@azure/playwright": "^1.1.6",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.0.1",
+    "allure-playwright": "^3.10.2",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
