@@ -6,9 +6,11 @@ const config = ({
   testDir: './tests',
   timeout: 40 * 1000,
   expect: { timeout: 50 * 1000 },
-  reporter: [
-    ['line'],
-    ['allure-playwright']
+ reporter: [
+    ['list'],
+    ['allure-playwright', {
+      resultsDir: 'allure-results'
+    }]
   ],
   use: {
     // baseURL:'https://eventhub.rahulshettyacademy.com',
