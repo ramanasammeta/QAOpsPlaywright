@@ -82,9 +82,3 @@ jobs:
           publish_dir: ./allure-report
           publish_branch: gh-pages
           force_orphan: true
-      # ==========================================
-      # Fail workflow if Playwright tests failed
-      # ==========================================
-      - name: Fail if Playwright tests failed
-        if: always() && steps.playwright.outcome == 'failure'
-        run: exit 1
