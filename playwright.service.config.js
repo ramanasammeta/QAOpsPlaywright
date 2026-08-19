@@ -21,9 +21,14 @@ export default defineConfig(
     This configuration will replace any existing reporter settings from your base config.
     If you're already using other reporters, add them to this array.
     */
-   reporter: [
-     ["html", { open: "never" }],
-     ["@azure/playwright/reporter"],
+    reporter: [
+      ['html', { open: 'never' }],
+      ['@azure/playwright/reporter', {
+        // Azure Workspaces reporter options
+      }],
+      ['allure-playwright', {
+        resultsDir: 'allure-results',
+      }],
     ],
   }
 );
